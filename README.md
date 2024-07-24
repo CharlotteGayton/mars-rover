@@ -21,3 +21,10 @@ REPORT
 ```
 
 There are attached unit tests that demonstrate and check the functionality of the code. 
+
+## Running locally
+
+To install dependencies run:
+```
+pip install requirements
+```
