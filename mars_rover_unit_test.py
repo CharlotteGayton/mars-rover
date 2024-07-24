@@ -99,5 +99,14 @@ class TestRobot(unittest.TestCase):
         sys.stdout = sys.__stdout__          
         self.assertEqual(captured_output.getvalue().strip(), "x and y values must be numeric")
 
+    def test_run(self):
+        self.mars_rover = robot()
+        self.mars_rover.command_input("PLACE 1,2,EAST")
+        self.mars_rover.command_input("MOVE")
+        self.mars_rover.command_input("MOVE")
+        self.mars_rover.command_input("LEFT")
+        self.mars_rover.command_input("MOVE")
+        self.assertEqual(self.mars_rover.command_report(), "3,3,NORTH")
+
 if __name__ == '__main__':
     unittest.main()

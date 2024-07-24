@@ -88,7 +88,9 @@ class robot:
             return "Robot is not on board"
         else:
             # Return a report on the robots current location and direction
+            print(f"{self.x},{self.y},{self.directions[self.direction_index]}")
             return f"{self.x},{self.y},{self.directions[self.direction_index]}"
+        
 
     def command_left(self):
         # Take the modulus of four to determine the index of the robot's direction 
